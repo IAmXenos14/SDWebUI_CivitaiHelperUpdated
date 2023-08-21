@@ -1,11 +1,10 @@
 ### Language
-[中文](README.cn.md)   
-[日本語](README.jp.md)  
-[한국어(ChatGPT)](README.kr.md)  
+[中文](README.cn.md)  
+[日本語(非公式)](https://economylife.net/civitai-helper-webui-install/)  
 
 ## About Civitai Helper2: Model Info Helper
 Civitai Helper 2 will be renamed to **ModelInfo Helper**. It is under development, you can watch its UI demo video to see how it gonna look like:    
-[YouTube](https://youtu.be/mPcKwQDDH8s)  
+[https://youtu.be/mPcKwQDDH8s](https://youtu.be/mPcKwQDDH8s)  
 
 # Notice
 **This extension now is very stable and works well for many people. If you have an issue, check console log window's detail and read [common issue](#common-issue) part**   
@@ -195,9 +194,6 @@ Enjoy!
 #### Localization
 There was a Localization issue if you are not using English version of SD webui. This is fixed in the latest version of this extension. **Bilingual localization extension is supported by PR since v1.6.1.1.**  
 
-##### Using cloud based localization extension
-Turn off cloud based localization extension, use normal localization extension.  
-
 #### Other case
 First of all, make sure you clicked "Refresh Civitai Helper" button.  
 
@@ -216,22 +212,6 @@ Civitai has a connection pool setting. Basicly, it's a max connection number tha
 
 In those cases, the only thing you can do is just wait a while then try again.  
 
-### Get Wrong model info and preview images from civitai
-A bad news is, some models are saved with a wrong sha256 in civitai's database. Check here for more detail:  
-[https://github.com/civitai/civitai/issues/426](https://github.com/civitai/civitai/issues/426)  
-
-So, for those models, this extension can not get the right model info or preview images.   
-
-In this case, you have to remove the model info file and get the right model info by a civitai url on this extension's tab page.  
-
-Also, you can report those models with wrong sha256 to civitai at following page:   
-[https://discord.com/channels/1037799583784370196/1096271712959615100/1096271712959615100](https://discord.com/channels/1037799583784370196/1096271712959615100/1096271712959615100)  
-
-Please report that model to civitai, so they can fix it.  
-
-
-
-
 ### Scanning fail when using colab
 First of, search your error message with google. Most likely, it will be a colab issue.    
 
@@ -246,18 +226,6 @@ Since v1.5.5, we've already optimized the SHA256 function to the top. So the onl
 
 
 # Change Log
-## v1.6.4
-* Add "Download All files" checkbox for downloading model section. Uncheck means only download 1 file.
-
-## v1.6.3
-* Support downloading multiple files, not avaiable when checking new version.
-
-## v1.6.2.1
-* when parsing civitai url, remove query string by PR
-
-## v1.6.2
-* When downloading, re-name file if file already exists
-
 ## v1.6.1.1
 * Support bilingual localization extension by PR
 

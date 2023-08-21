@@ -338,7 +338,7 @@ onUiLoaded(() => {
 
     // get all extra network tabs
     let tab_prefix_list = ["txt2img", "img2img"];
-    let model_type_list = ["textual_inversion", "hypernetworks", "checkpoints", "lora"];
+    let model_type_list = ["textual_inversion", "hypernetworks", "checkpoints", "lora", "lycoris"];
     let cardid_suffix = "cards";
 
     //get init py msg
@@ -450,6 +450,9 @@ onUiLoaded(() => {
                 case "lora":
                     active_extra_tab_type = "lora";
                     break;
+                case "lycoris":
+                    active_extra_tab_type = "lyco";
+                    break;
             }
 
 
@@ -467,6 +470,9 @@ onUiLoaded(() => {
                         break;
                     case "lora":
                         model_type = "lora";
+                        break;
+                    case "lycoris":
+                        model_type = "lyco";
                         break;
                 }
 
@@ -510,9 +516,16 @@ onUiLoaded(() => {
                     additional_node = card.querySelector(".actions .additional");
                     //get ul node, which is the parent of all buttons
                     ul_node = card.querySelector(".actions .additional ul");
+                    if (ul_node==null) {
+                        ul_node = document.createElement("ul");   
+                        additional_node.appendChild(ul_node);					
+                    }
                     // replace preview text button
                     replace_preview_btn = card.querySelector(".actions .additional a");
-
+					if (replace_preview_btn==null) {
+						replace_preview_btn = document.createElement("a");   
+						additional_node.appendChild(replace_preview_btn);
+					}	
                     // check thumb mode
                     if (is_thumb_mode) {
                         additional_node.style.display = null;
@@ -672,7 +685,7 @@ onUiLoaded(() => {
                     }
                     ul_node.appendChild(add_trigger_words_node);
                     ul_node.appendChild(use_preview_prompt_node);
-
+					ul_node.appendChild(replace_preview_btn);
 
 
 

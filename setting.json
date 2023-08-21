@@ -1,0 +1,13 @@
+{
+    "model": {
+        "max_size_preview": true,
+        "skip_nsfw_preview": false
+    },
+    "general": {
+        "open_url_with_js": true,
+        "always_display": true,
+        "show_btn_on_thumb": true,
+        "proxy": ""
+    },
+    "tool": {}
+}
